@@ -1,0 +1,124 @@
+
+
+/* baymax and gradiant background */
+.baymax-pic
+{
+  position: absolute;
+  right: 46.5vw;
+  bottom: 250vh;
+  z-index: -1;
+  height: 35vw;
+  width: 30vw;
+}
+
+.gradiant-pic
+{
+  position: absolute;
+  right: 49vw;
+  top: 0;
+  z-index: -2;
+  height: 100vh;
+  width: 25vw;
+}
+
+/* header - navbar and search bar */
+.header
+{
+  top: 8.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* right section - nav bar */
+.right-section
+{
+  text-align: center;
+  display: flex;
+  position: fixed;
+  top: 8.5vh;
+  height: 6vh;
+  right: 10vw;
+
+
+}
+.nav-bar
+{
+color: #D0D0D0;
+font-family: Heebo, sans-serif;
+font-size: 95%;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+padding-left: 1vw;
+padding-left: 1vw;
+
+}
+
+/* left section - search bar */
+.left-section
+{
+  position: fixed;
+  height: 6vh;
+  width: 15vw; 
+  top: 8.5vh;
+  left: 3vw;
+ 
+}
+.search-bar
+{
+  text-align: right;
+  background: #25232E;
+  border-color:white;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1.5px;
+  height: 45%;
+  width: 70%; 
+  min-height: 15px;
+  transition: 0.5s;
+  color: white;
+
+}
+.search-bar:focus{
+  width: 90%; 
+}
+
+/* body - text and button */
+.text{
+  position: absolute;
+  width: 35vw; 
+  top: 18vh;
+  right: 7vw;
+}
+
+h1{
+  color: white;
+  font-family:Rubik ;
+  font-size: 450%;
+  font-weight: 900;
+  margin-bottom: 0;
+
+}
+
+p{
+  color: white;
+  font-family: heebo;
+  font-size: 100%;
+}
+
+.to-arsenal-button{
+  position: relative;
+  margin-top: 4vh;
+  font-family:Rubik ;
+  font-weight: bold;
+  background-color: #D0D0D0;
+  border-style: solid;
+  border-color: #D0D0D0;
+  border-radius: 5px;
+  right: 12vw;
+  height: 2vw;
+  width: 5vw;
+
+}
