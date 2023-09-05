@@ -84,6 +84,12 @@ padding-left: 1vw;
 .search-bar:focus{
   width: 90%; 
 }
+.search-icon{
+  height: 2vh;
+  position:inherit;
+  top: 0.8vh;
+  left: 3vw;
+}
 
 /* body - text and button */
 .text{
