@@ -10,7 +10,7 @@
 .baymax-pic
 {
   position: absolute;
-  right: 46.5vw;
+  right: 49.5vw;
   bottom: 251vh;
   z-index: 3;
   height: 35vw;
@@ -20,7 +20,7 @@
 .gradiant-pic
 {
   position: absolute;
-  right: 49vw;
+  right: 52vw;
   top: 0;
   z-index: 2;
   height: 100vh;
@@ -36,7 +36,7 @@
   height: 14.5vh;
   display: flex;
   flex-direction: row;
-  background-color: #25232E;
+  background-color:#25232E;
   z-index: 1;
 
 }
@@ -149,3 +149,4 @@ p{
   width: 99vw;
   z-index: -5;
 }
+
