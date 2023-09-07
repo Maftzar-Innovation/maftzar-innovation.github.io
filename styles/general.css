@@ -13,6 +13,20 @@ body
   direction: rtl;
 }
 
+::-webkit-scrollbar{
+  width: 0.7vw;
+
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent,#625f73);
+  border-radius: 6px;
+  
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent,#ffffff);
+}
+
 /*========styles changes for small screem size=======*/
 @media only screen and (max-width: 768px) 
 {
