@@ -64,6 +64,7 @@ line-height: normal;
 text-align: center;
 padding-left: 1vw;
 padding-left: 1vw;
+cursor: pointer;
 
 }
 
@@ -140,6 +141,7 @@ p{
   right: 12vw;
   height: 2vw;
   width: 5vw;
+  cursor: pointer;
 
 }
 
@@ -150,3 +152,43 @@ p{
   z-index: -5;
 }
 
+.card-picture{
+  margin-top: 2px;
+  margin-left: 30px;
+  opacity: 0.9;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #D0D0D0;
+  height: 11vw;
+  width: 20vw;
+  object-fit: fill;
+}
+.slider{
+  display: flex;
+  position: relative;
+  top: 10vh;
+  right: 8vw;
+  height: 12vw;
+  width: 80vw;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.next-btn {
+  height: 2.5vw;
+  position: absolute;
+  right: 4.5vw;
+  top: 120vh; 
+  cursor: pointer;
+
+}
+
+ .prev-btn{
+  transform: rotateY(180deg);
+  height: 2.5vw;
+  cursor: pointer;
+  position: absolute;
+  left: 7.5vw;
+  top: 120vh;
+}
