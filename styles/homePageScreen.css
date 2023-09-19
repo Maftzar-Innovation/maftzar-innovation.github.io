@@ -291,20 +291,45 @@ p{
   border: 2px solid rgba(255, 255, 255, 0.10);
   background: linear-gradient(134deg, #2F2F3B 0%, rgba(47, 47, 59, 0.00) 100%)
 }
+.question{
+  margin-bottom: 0;
+  margin-top: 0;
 
-.question-rect {
-  display: flex;
-  width: auto;
+}
+
+.answer-rect {
+  width: 15vw;
   height: 2.25vw;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.10);
   background: #454452;
-  position: relative;
-  align-items: center;
+  margin-bottom: 0.5vw;
+
 }
 .hi-pic{
   height: 18vw;
   position: absolute;
   top: 8vw;
   right: 41vw;
+}
+
+.rect-background h1{
+  font-family:'Rubik One', sans-serif ;
+  color: white;
+  font-size: 3vw;
+  margin-top: 0;
+
+}
+.rect-background h3{
+  font-family:'Rubik One', sans-serif ;
+  color: white;
+  font-size: 1.5vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
+.rect-background p{
+  font-family:'Heebo', sans-serif ;
+  color: white;
+  margin-top: 0;
 }
