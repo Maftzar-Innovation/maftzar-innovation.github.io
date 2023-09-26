@@ -1,9 +1,9 @@
-const carousel = document.querySelector(".carousel");
-carousel.addEventListener("click", () => {console.log("carousel")});
+function leftScroll(){
+    const left = document.querySelector(".scroller");
+    left.scrollBy(-400,0);
+}
 
-const arrowNext = document.querySelector(".next-btn");
-arrowNext.addEventListener("click", () => {console.log("next")});
-
-const arrowPrev = document.querySelector(".prev-btn");
-arrowPrev.addEventListener("click", () => {console.log("previous")});
-
+function rightScroll(){
+    const right = document.querySelector(".scroller");
+    right.scrollBy(400,0);
+}
