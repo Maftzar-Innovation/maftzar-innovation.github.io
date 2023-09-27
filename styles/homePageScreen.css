@@ -35,34 +35,6 @@
   height: 100vh;
   width: 25vw;
 }
-
-/* header - navbar and search bar */
-.header
-{
-  position:fixed;
-  top: 0;
-  width: 100%;
-  height: 14.5vh;
-  background-color:#25232E;
-  z-index: 1;
-}
-
-/* right section - nav bar */
-.right-section
-{
-  text-align: center;
-  display: flex;
-  position: fixed;
-  top: 8vh;
-  height: 6vh;
-  right: 10vw;
-}
-.nav-bar
-{
-padding-left: 1vw;
-cursor: pointer;
-}
-
 .search-bar
 {
   text-align: right;
@@ -83,7 +55,6 @@ cursor: pointer;
   width:35vh; 
   left: 2.25vw;
 }
-
 /* body - text and button */
 .text{
   position: absolute;
@@ -191,13 +162,50 @@ h1.website-header{
   height: 6.5vw;
   width: 6.5vw;  
   object-fit: cover;
+  border-style: solid;
+  border-color: #D0D0D0;
+  border-width: 3px;
 }
 
-.first-row .img:hover, .second-row .img:hover, .third-row img:hover{
-  height: 8vw;
-  width: 8vw;
+.img-container{
+  border-radius: 50%;
+  margin-left: 0.25vw;
+  min-width: 0;
+  height: 6.5vw;
+  width: 6.5vw;  
+  background-color:#D0D0D0;
+}
+
+.person-info{
+  opacity: 0;
+  transition: opacity 0.1s;
+  text-align: center;
+  color: #25232E;
+  position: absolute;
+  top: 9.75vw;
+  right: 10vw;
+  width: 7vw;
+}
+
+.img-container:hover{
+  height: 10vw;
+  width: 10vw;
+  align-self: center;
   cursor: pointer;
   z-index: 1;
+}
+
+.img-container:hover .person-info{
+  opacity: 1;
+}
+
+.img-container:hover .img{
+  height: 7vw;
+  width: 7vw;
+  z-index: 1;
+  position: absolute;
+  top: 3vw;
+  right: 9.75vw;
 }
 
 
