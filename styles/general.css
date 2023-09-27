@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/rubik-one');
+
 body
 {
   margin: 0;
@@ -23,16 +25,17 @@ h1{
   font-weight: 600;
 }
 h2{
-  color: white;
-  font-family: 'Rubik One';
-  font-size: 300%;
-  font-weight: 600;
+  color: #FFF;
+  text-align: right;
+  font-family: Rubik One;
+  font-size: 2vw;
+  font-weight: 400;
 }
 h3{
   color: #FFF;
   text-align: right;
   font-family: 'Rubik One';
-  font-size: 1.25vw;
+  font-size: 1.1vw;
   font-weight: 400;
 }
 

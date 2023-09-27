@@ -1,4 +1,60 @@
 .page-header{
     position: absolute;
-    top: 10vw;
+    top: 6.5vw;
+    right: 5vw;
 }
+.row-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 12vw;
+    right: 2.5vw;
+    margin-bottom: 9.25vw;
+    width: 95lvw;
+}
+.row-header{
+    position: relative;
+    right: 1vw;
+}
+.card-pic{
+    height: 8.5vw;
+    min-width: 15vw;
+    margin-right: 1vw;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    cursor: pointer;
+  }
+
+  .left{
+    cursor: pointer;
+    width: 2.5vw;
+    height: 2.5vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    top: 6.75vw;
+    right: 85vw;
+  }
+  .right{
+    cursor: pointer;
+    width: 2.5vw;
+    height: 2.5vw;
+    position: absolute;
+    top: 6.75vw;
+    right: 2vw;
+  }
+
+  .scroller{
+    width: 82vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: absolute;
+    top: 3vw;
+    right: 3.5vw;
+  }
+  
+  .scroller::-webkit-scrollbar{
+    display: none;
+  }
+  
