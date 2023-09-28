@@ -8,9 +8,9 @@
     flex-direction: column;
     position: relative;
     top: 12vw;
-    right: 2.5vw;
-    margin-bottom: 9.25vw;
-    width: 95lvw;
+    right: 3vw;
+    margin-bottom: 12vw;
+    width: 92vw;
 }
 .row-header{
     position: relative;
@@ -19,6 +19,7 @@
 .card-pic{
     height: 8.5vw;
     min-width: 15vw;
+    max-width: 15vw;
     margin-right: 1vw;
     border-radius: 25px;
     border: 2px solid rgba(255, 255, 255, 0.10);
@@ -33,7 +34,7 @@
     transform: scaleX(-1);
     position: absolute;
     top: 6.75vw;
-    right: 85vw;
+    right: 86.5vw;
   }
   .right{
     cursor: pointer;
@@ -41,7 +42,7 @@
     height: 2.5vw;
     position: absolute;
     top: 6.75vw;
-    right: 2vw;
+    right: 3.5vw;
   }
 
   .scroller{
@@ -51,10 +52,45 @@
     scroll-behavior: smooth;
     position: absolute;
     top: 3vw;
-    right: 3.5vw;
+    right: 5vw;
   }
   
   .scroller::-webkit-scrollbar{
     display: none;
   }
   
+  .card-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-label{
+    display: flex;
+    gap: 0.5vw;
+    position: relative;
+    bottom: 0.8vw;
+  }
+
+  .card-name{
+    position: relative;
+    bottom: 0.6vw;
+    right: 2.25vw;
+  }
+
+  .card-container h3{
+    font-size: 1vw;
+  }
+
+  .card-container p{
+    font-size: 60%;
+    font-weight: bold;
+    position: relative;
+    bottom: 1vw;
+    right: 2vw;
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+  }  
+  p.label{
+    border-radius: 8px;
+    background-color:#49494A;
+  }
