@@ -77,8 +77,8 @@
     right: 2.25vw;
   }
 
-  .card-container h3{
-    font-size: 1vw;
+  .card-name h3{
+    font-size: 0.9vw;
   }
 
   .card-container p{
@@ -94,3 +94,20 @@
     border-radius: 8px;
     background-color:#49494A;
   }
+
+.search-bar
+{
+  text-align: right;
+  background: #25232E;
+  border-color:white;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1.5px;
+  height: 3vh;
+  width: 60.5vw; 
+  transition: 0.5s;
+  color: white;
+  position: fixed; 
+  left: 5vw;
+  top: 9.5vh;
+}

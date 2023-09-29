@@ -1,0 +1,41 @@
+.search-bar
+{
+  text-align: right;
+  background: #25232E;
+  border-color:white;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1.5px;
+  height: 3vh;
+  width: 60.5vw; 
+  transition: 0.5s;
+  color: white;
+  position: fixed; 
+  left: 5vw;
+  top: 9.5vh;
+}
+.page-header{
+    position: absolute;
+    top: 6.5vw;
+    right: 5vw;
+}
+
+.cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15vw;
+    right: 3vw;
+    width: 95vw;
+}
+.card-pic{
+    height: 8.5vw;
+    min-width: 15vw;
+    max-width: 15vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    cursor: pointer;
+  }

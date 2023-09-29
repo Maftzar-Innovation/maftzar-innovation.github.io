@@ -88,26 +88,6 @@ cursor: pointer;
 align-self: center;
 }
 
-.search-bar
-{
-  text-align: right;
-  background: #25232E;
-  border-color:white;
-  border-style: solid;
-  border-radius: 8px;
-  border-width: 1.5px;
-  height: 3.25vh;
-  width: 20vh; 
-  transition: 0.5s;
-  color: white;
-  position: fixed; 
-  left: 5vw;
-  top: 8.25vh;
-}
-.search-bar:focus{
-  width:35vh; 
-  left: 2.25vw;
-}
 
 /*========styles changes for small screem size=======*/
 @media only screen and (max-width: 768px) 
