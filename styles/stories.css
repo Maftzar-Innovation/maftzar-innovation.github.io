@@ -25,17 +25,40 @@
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
-    top: 15vw;
-    right: 3vw;
+    top: 13vw;
+    right: 3.25vw;
     width: 95vw;
 }
 .card-pic{
-    height: 8.5vw;
+    height: 15vw;
+    min-width: 16vw;
+    max-width: 16vw;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.25);
+  }
+  .card-container{
+    height: 15vw;
+    min-width: 16vw;
+    max-width: 16vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .story-header{
     min-width: 15vw;
     max-width: 15vw;
-    margin-right: 1vw;
-    margin-bottom: 1vw;
-    border-radius: 25px;
-    border: 2px solid rgba(255, 255, 255, 0.10);
-    cursor: pointer;
+    position: relative;
+    bottom: 6vw;
+    right: 0.5vw;
+    font-size: 1vw;
   }
+
+  .story-description{
+    min-width: 15vw;
+    max-width: 15vw;
+    position: relative;
+    bottom: 7vw;
+    right: 0.5vw;
+  }
+  
