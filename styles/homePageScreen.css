@@ -162,7 +162,7 @@ h1.website-header{
   width: 6.5vw;  
   object-fit: cover;
   border-style: solid;
-  border-color: #D0D0D0;
+  border-color: #dfdddd;
   border-width: 3px;
 }
 
@@ -172,14 +172,16 @@ h1.website-header{
   min-width: 0;
   height: 6.5vw;
   width: 6.5vw;  
-  background-color:#D0D0D0;
+  background-color:#2f2e33;
+  box-shadow: black;
+  transition: width 0.2s, height 0.2s; 
 }
 
 .person-info{
   opacity: 0;
   transition: opacity 0.1s;
   text-align: center;
-  color: #25232E;
+  color: #ffffff;
   position: absolute;
   top: 9.75vw;
   right: 10vw;
@@ -187,11 +189,14 @@ h1.website-header{
 }
 
 .img-container:hover{
+  border-radius: 3vw;
   height: 10vw;
-  width: 10vw;
-  align-self: center;
+  width: 1vw;
   cursor: pointer;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
 }
 
 .img-container:hover .person-info{
@@ -200,11 +205,9 @@ h1.website-header{
 
 .img-container:hover .img{
   height: 7vw;
-  width: 7vw;
-  z-index: 1;
-  position: absolute;
-  top: 3vw;
-  right: 9.75vw;
+  width: 7vw; 
+  margin-top: 0.5vw;
+
 }
 
 
