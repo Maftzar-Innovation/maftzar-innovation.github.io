@@ -131,7 +131,7 @@ h1.website-header{
   position: absolute;
   top: 140vh;
   right: 10vw;
-  height: 25vw;
+  height: 32vw;
   width: 80vw;
 }
 
@@ -140,15 +140,15 @@ h1.website-header{
   flex-direction: row;
   align-self: center;
   justify-content: space-evenly;
-  height: 7vw;
-  width: 64vw;
+  height: 10vw;
+  width: 66vw;
 }
 
 .second-row{
   display: flex;
   flex-direction: row;
   align-self: center;
-  height: 7vw;
+  height: 10vw;
   width: 57.5vw;
   justify-content: space-evenly;
 
@@ -158,12 +158,10 @@ h1.website-header{
   border-radius: 50%;
   margin-left: 0.25vw;
   min-width: 0;
-  height: 6.5vw;
-  width: 6.5vw;  
+  height: 7vw;
+  width: 7vw;  
   object-fit: cover;
-  border-style: solid;
-  border-color: #dfdddd;
-  border-width: 3px;
+  transition: opacity 0.25s;
 }
 
 .img-container{
@@ -177,18 +175,27 @@ h1.website-header{
   transition: width 0.2s, height 0.2s; 
 }
 
-.person-info{
-  opacity: 0;
-  transition: opacity 0.1s;
+.person-name{
+  font-size: 0.9vw;
+  margin-top: 0.25vw;
+  margin-bottom: 0.25vw;
+  font-weight: bold;
+  width: 5vw;
+  position: relative;
+  right: 0.8vw;
   text-align: center;
   color: #ffffff;
-  position: absolute;
-  top: 9.75vw;
-  right: 10vw;
-  width: 7vw;
+}
+.person-job{
+  margin-top: 0;
+  position: relative;
+  right: 0.8vw;
+  bottom: 7vw;
+  width: 3vw;
+  z-index: 2;
 }
 
-.img-container:hover{
+/* .img-container:hover{
   border-radius: 3vw;
   height: 10vw;
   width: 1vw;
@@ -197,17 +204,11 @@ h1.website-header{
   display: flex;
   justify-content: center;
   opacity: 0.8;
-}
-
-.img-container:hover .person-info{
-  opacity: 1;
-}
+} */
 
 .img-container:hover .img{
-  height: 7vw;
-  width: 7vw; 
-  margin-top: 0.5vw;
-
+  opacity: 0;
+  cursor: pointer;
 }
 
 
