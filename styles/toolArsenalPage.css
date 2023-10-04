@@ -75,6 +75,7 @@
     position: relative;
     bottom: 0.6vw;
     right: 2.25vw;
+    width: 12vw;
   }
 
   .card-name h3{
