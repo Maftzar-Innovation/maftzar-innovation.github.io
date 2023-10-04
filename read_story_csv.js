@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Fetch CSV file
     $.ajax({
         type: "GET",
-        url: "sample.csv",
+        url: "innovation_tools/tools.csv",
         dataType: "text",
         success: function (data) {
             // Parse CSV data
@@ -26,13 +26,16 @@ $(document).ready(function () {
                 }
 
                 // Generate tile for each row
-                html += '<div class="tile card-container">';
+                html += '<div class="card-container">';
                 // Every tile has an image, an h3 title and a description
-                html += '<img class="card-pic" src="pics\storyImg.PNG" alt="picture">';
-                html += `<h3><strong>${header[j]}:</strong> ${values[j]}</h3>`;
-                for (let j = 0; j < values.length; j++) {          
-                    html += `<p><strong>${header[j]}:</strong> ${values[j]}</p>`;
-                }
+                html += `<a href=${values[2]}><img class="card-pic" src=${values[3]} alt="picture"></a>`;
+                html += `<h3 class="story-header">${values[0]}</h3>`;
+                html += `<dl class="story-description">${values[1]}</dl>`;
+
+                
+                // for (let j = 0; j < values.length; j++) {          
+                //     html += `<p><strong>${header[j]}:</strong> ${values[j]}</p>`;
+                // }
                 html += '</div>';
             }
 
