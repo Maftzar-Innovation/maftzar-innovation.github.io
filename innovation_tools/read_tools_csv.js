@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Fetch CSV file
     $.ajax({
         type: "GET",
-        url: "stories.csv",
+        url: "innovation_tools/tools.csv",
         dataType: "text",
         success: function (data) {
             // Parse CSV data
