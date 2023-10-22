@@ -19,11 +19,10 @@
 .baymax-pic
 {
   position: absolute;
-  right: 49.5vw;
+  right: 32vw;
   bottom: 251vh;
   z-index: 3;
-  height: 35vw;
-  width: 30vw;
+  height: 39vw;
 }
 
 .gradiant-pic

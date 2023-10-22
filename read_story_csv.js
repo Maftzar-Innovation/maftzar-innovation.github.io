@@ -31,11 +31,6 @@ $(document).ready(function () {
                 html += `<a href=${values[2]}><img class="card-pic" src=${values[3]} alt="picture"></a>`;
                 html += `<h3 class="story-header">${values[0]}</h3>`;
                 html += `<dl class="story-description">${values[1]}</dl>`;
-
-                
-                // for (let j = 0; j < values.length; j++) {          
-                //     html += `<p><strong>${header[j]}:</strong> ${values[j]}</p>`;
-                // }
                 html += '</div>';
             }
 
