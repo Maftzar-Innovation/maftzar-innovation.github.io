@@ -9,7 +9,7 @@ $(document).ready(function () {
             const rows = data.split('\n');
             const header = rows[0].split(',');
 
-            // Remove the first element if it's empty
+            // Remove the first element if it`s empty
             if (header[0] === '') {
                 header.shift();
             }
@@ -21,45 +21,58 @@ $(document).ready(function () {
             let cardRow3;
 
             //Generate card rows content 
-            cardRow1,cardRow2,cardRow3='<div class="row-container">';
-            cardRow1+='<div><h3 class="row-header">מצגות</h3></div>';
-            cardRow2+='<div><h3 class="row-header">לוחות זמנים/h3></div>';
-            cardRow3+='<div><h3 class="row-header">מסמכים מנהלתיים</h3></div>';
-            cardRow1,cardRow2,cardRow3+='<div class="scroller">';
+            cardRow1,cardRow2,cardRow3=`<div class="row-container">`;
+            cardRow1+=`<div><h3 class="row-header">מצגות</h3></div>`;
+            cardRow2+=`<div><h3 class="row-header">לוחות זמנים/h3></div>`;
+            cardRow3+=`<div><h3 class="row-header">מסמכים מנהלתיים</h3></div>`;
+            cardRow1,cardRow2,cardRow3+=`<div class="scroller">`;
 
-
+            //Generate image arry type=> 0=excel 1=pdf 2=ppt 3=word
+            let arr = ['pics\excel.PNG','pics\pdf.PNG','pics\powerpoint.PNG','pics\word.PNG'];
 
             for (let i = 1; i < rows.length; i++) {
-                const values = rows[i].split(',');
+                const values = rows[i].split(`,`);
 
-                // Remove the first element if it's empty
-                if (values[0] === '') {
+                // Remove the first element if it`s empty
+                if (values[0] === ``) {
                     values.shift();
                 }
-         
-                //if type=1 =>cardrow1 type=2 =>cardrow2 type=3 =>cardrow3
-    
-    //       <div class="card-container">
-    //         <img class="card-pic" src="pics\powerpoint.PNG" alt="picture">
-    //         <div class="card-name"><h3>פרסונה אמפתיה</h3></div>
-    //       </div>
-
+                
+                //if row=1 =>cardrow1 row=2 =>cardrow2 row=3 =>cardrow3 default=>cardrow1
                 // Generate tile for each row
-                html += '<div class="card-container">';
-                // Every tile has an image, an h3 title and a description
-                html += `<a href=${values[2]}><img class="card-pic" src=${values[3]} alt="picture"></a>`;
-                html += `<h3 class="story-header">${values[0]}</h3>`;
-                html += `<dl class="story-description">${values[1]}</dl>`;
-                html += '</div>';
-            
+                switch(values[0]) {
+                    case 1:
+                        cardRow1+=`<div class="card-container">`;
+                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow1+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
+                        cardRow1+=`</div>`;
+                      break;
+                    case 2:
+                        cardRow2+=`<div class="card-container">`;
+                        cardRow2+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow2+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
+                        cardRow2+=`</div>`;
+                      break;
+                      case 3:
+                        cardRow3+=`<div class="card-container">`;
+                        cardRow3+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow3+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
+                        cardRow3+=`</div>`;
+                      break;
+                    default:
+                        cardRow1+=`<div class="card-container">`;
+                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow1+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
+                        cardRow1+=`</div>`;
+                  }
             
             }
 
             //closing each row
-            cardRow1,cardRow2,cardRow3+='</div>';
-            cardRow1,cardRow2,cardRow3+='<img class="left" src="pics\next_icon.png" onclick="leftScroll()">';
-            cardRow1,cardRow2,cardRow3+='<img class="right" src="pics\next_icon.png" onclick="rightScroll()">';
-            cardRow1,cardRow2,cardRow3+='</div>';
+            cardRow1,cardRow2,cardRow3+=`</div>`;
+            cardRow1,cardRow2,cardRow3+=`<img class="left" src="pics\next_icon.png" onclick="leftScroll()">`;
+            cardRow1,cardRow2,cardRow3+=`<img class="right" src="pics\next_icon.png" onclick="rightScroll()">`;
+            cardRow1,cardRow2,cardRow3+=`</div>`;
 
             //combining the rows
             html+=cardRow1;
@@ -67,10 +80,10 @@ $(document).ready(function () {
             html+=cardRow3;
 
             // Display content in the tile container
-            $('#tileContainer').html(html);
+            $(`#tileContainer`).html(html);
         },
         error: function (error) {
-            console.error('Error fetching CSV:', error);
+            console.error(`Error fetching CSV:`, error);
         }
     });
 });
