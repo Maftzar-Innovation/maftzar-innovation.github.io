@@ -1,3 +1,9 @@
+function addToVars(vars, val) {
+    vars.forEach(variable => {
+        variable = variable + val;
+    });
+}
+
 $(document).ready(function () {
     // Fetch CSV file
     $.ajax({
