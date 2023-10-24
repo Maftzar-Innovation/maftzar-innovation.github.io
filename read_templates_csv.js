@@ -21,14 +21,21 @@ $(document).ready(function () {
             let cardRow3;
 
             //Generate card rows content 
-            cardRow1,cardRow2,cardRow3=`<div class="row-container">`;
+            cardRow1=`<div class="row-container">`;
+            cardRow2=`<div class="row-container">`;
+            cardRow3=`<div class="row-container">`;
+
             cardRow1+=`<div><h3 class="row-header">מצגות</h3></div>`;
-            cardRow2+=`<div><h3 class="row-header">לוחות זמנים/h3></div>`;
+            cardRow2+=`<div><h3 class="row-header">לוחות זמנים</h3></div>`;
             cardRow3+=`<div><h3 class="row-header">מסמכים מנהלתיים</h3></div>`;
-            cardRow1,cardRow2,cardRow3+=`<div class="scroller">`;
+
+            cardRow1+=`<div class="scroller">`;
+            cardRow2+=`<div class="scroller">`;
+            cardRow3+=`<div class="scroller">`;
 
             //Generate image arry type=> 0=excel 1=pdf 2=ppt 3=word
-            let arr = ['pics\excel.PNG','pics\pdf.PNG','pics\powerpoint.PNG','pics\word.PNG'];
+            let arr = ['pics/excel.PNG','pics/pdf.PNG','pics/powerpoint.PNG','pics/word.PNG'];
+            console.log();
 
             for (let i = 1; i < rows.length; i++) {
                 const values = rows[i].split(`,`);
@@ -41,27 +48,27 @@ $(document).ready(function () {
                 //if row=1 =>cardrow1 row=2 =>cardrow2 row=3 =>cardrow3 default=>cardrow1
                 // Generate tile for each row
                 switch(values[0]) {
-                    case 1:
+                    case '1':
                         cardRow1+=`<div class="card-container">`;
-                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=${arr[values[1]]} alt="picture"></a>`;
                         cardRow1+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
                         cardRow1+=`</div>`;
                       break;
-                    case 2:
+                    case '2':
                         cardRow2+=`<div class="card-container">`;
-                        cardRow2+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow2+=`<a href=${values[3]}><img class="card-pic" src=${arr[values[1]]} alt="picture"></a>`;
                         cardRow2+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
                         cardRow2+=`</div>`;
                       break;
-                      case 3:
+                      case '3':
                         cardRow3+=`<div class="card-container">`;
-                        cardRow3+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow3+=`<a href=${values[3]}><img class="card-pic" src=${arr[values[1]]} alt="picture"></a>`;
                         cardRow3+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
                         cardRow3+=`</div>`;
                       break;
                     default:
                         cardRow1+=`<div class="card-container">`;
-                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=arr[${values[1]}] alt="picture"></a>`;
+                        cardRow1+=`<a href=${values[3]}><img class="card-pic" src=${arr[values[1]]} alt="picture"></a>`;
                         cardRow1+=`<div class="card-name"><h3>${values[2]}</h3></div>`;
                         cardRow1+=`</div>`;
                   }
@@ -69,10 +76,21 @@ $(document).ready(function () {
             }
 
             //closing each row
-            cardRow1,cardRow2,cardRow3+=`</div>`;
-            cardRow1,cardRow2,cardRow3+=`<img class="left" src="pics\next_icon.png" onclick="leftScroll()">`;
-            cardRow1,cardRow2,cardRow3+=`<img class="right" src="pics\next_icon.png" onclick="rightScroll()">`;
-            cardRow1,cardRow2,cardRow3+=`</div>`;
+            cardRow1+=`</div>`;
+            cardRow2+=`</div>`;
+            cardRow3+=`</div>`;
+
+            cardRow1+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
+            cardRow2+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
+            cardRow3+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
+            
+            cardRow1+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
+            cardRow2+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
+            cardRow3+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
+            
+            cardRow1+=`</div>`;
+            cardRow2+=`</div>`;
+            cardRow3+=`</div>`;
 
             //combining the rows
             html+=cardRow1;
