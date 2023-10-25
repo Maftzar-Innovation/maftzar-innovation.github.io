@@ -84,16 +84,42 @@ h1.website-header{
 
 /* 2nd screen */
 .card-pic{
-  height: 8.5vw;
+  height: 9vw;
   min-width: 15vw;
   margin-right: 1vw;
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.10);
   cursor: pointer;
 }
+
+.card-container{
+  height: 10vw;
+  min-width: 15vw;
+  max-width: 15vw;
+  margin-left: 1vw;
+}
+
+.story-header,.story-description{
+  position: relative;
+  bottom: 4vw;
+  right: 1.75vw;
+}
+
+.story-header{
+  font-size: 1vw;
+  margin-bottom: 0;
+}
+
+.story-description{
+  font-size: 0.75vw;
+  margin-top: 0;
+}
+
 .scroller{
   width: 80vw;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   overflow-y: hidden;
   scroll-behavior: smooth;
   position: absolute;

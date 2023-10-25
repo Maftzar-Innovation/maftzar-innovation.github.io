@@ -1,3 +1,13 @@
+textarea{
+  background: transparent;
+  border: transparent;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Heebo';
+  color: #ffffff;
+  height: 8vw;
+  resize: none;
+}
 
 #rectangle{
   width: 1050px;
@@ -10,29 +20,26 @@
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  width: auto;
   height: auto;
-}
-
-.cards-frame {
-  display: flex;
-  justify-content: center;
-  column-gap: 25px;
-  width: auto;
-  height: auto;
+  width: 100%;
 }
 
 .card {
   display: flex;
   min-width: 13vw;
   max-width: 13vw;
-  height: 25vw;
+  height: 20vw;
   border-radius: 32px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%);
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+
 }
 
-.card-content {
+/* .card-content {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -40,7 +47,7 @@
   row-gap: 25px;
   width: auto;
   height: auto;
-}
+} */
 
 .mini-rect-frame{
   display: flex;
@@ -183,7 +190,7 @@
 
 .the-screen{
   position: absolute;
-  top: 6vw;
+  top:  6vw;
   width: 80vw;
   right: 10vw;
 }
