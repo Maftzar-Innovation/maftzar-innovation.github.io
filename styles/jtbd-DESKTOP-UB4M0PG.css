@@ -8,10 +8,6 @@ textarea{
   height: 8vw;
   resize: none;
 }
-.graphics-container{
-  display: flex;
-  flex-direction: column;
-}
 
 #rectangle{
   width: 1050px;
@@ -20,7 +16,7 @@ textarea{
   border-color:var(--celeste2);
 }
 
-.card-container,.mini-rect-frame {
+.card-container {
   display: flex;
   column-gap: 0.75vw;
   height: auto;
@@ -39,8 +35,26 @@ textarea{
   flex-direction: column;
   align-items: center;
   row-gap: 25px;
+
 }
 
+/* .card-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  width: auto;
+  height: auto;
+} */
+
+.mini-rect-frame{
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+  width: auto;
+  height: auto;
+}
 
 .mini-rect {
   display: flex;
