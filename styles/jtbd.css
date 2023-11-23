@@ -36,11 +36,18 @@ textarea{
   border-color:var(--celeste2);
 }
 
+.cards-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: fit-content;
+}
+
 .card-container,.mini-card-frame {
   display: flex;
   column-gap: 0.75vw;
   height: auto;
-  width: 100%;
+  width: fit-content;
   align-items: center;
 }
 
@@ -67,6 +74,14 @@ textarea{
 .mini-card{
   height: 13vw;
   row-gap: 5px;
+}
+
+.captureButton {
+  align-self: center;
+  background-color: transparent; 
+  width: fit-content;
+  border: none;
+  border-radius: 50%;
 }
 
 /* .download-frame {

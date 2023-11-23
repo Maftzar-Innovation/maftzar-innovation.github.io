@@ -1,4 +1,14 @@
-@import url('https://fonts.cdnfonts.com/css/rubik-one');
+/* @import url('https://fonts.cdnfonts.com/css/rubik-one'); */
+
+@font-face {
+  font-family: 'Rubik One';
+  src: url(/fonts/rubik-one-cufonfonts/RubikOne-Regular.ttf) format('truetype'); /* Replace with your actual font file */
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('/fonts/heebo.regular.ttf') format('truetype');
+}
 
 body
 {

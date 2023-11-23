@@ -2,29 +2,55 @@
 <html>
   <head>
     <title>The Innovation Website</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles\stories.css">
-    <link rel="stylesheet" href="../styles\general.css">
-    <link rel="stylesheet" href="../styles\jtbd.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles\stories.css" />
+    <link rel="stylesheet" href="../styles\general.css" />
+    <link rel="stylesheet" href="../styles\jtbd.css" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- we can remove this later -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap"
+      rel="stylesheet" /> -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+    <script src="/screenshot.js"></script>
   </head>
 
   <body>
-<!--header - contains navigation bar and search bar-->
+    <!--header - contains navigation bar and search bar-->
     <div class="header">
-        <div class="right-section">
-          <a class="nav-bar" href="../homePage.html" style="text-decoration:none; color: #d0d0d0;">דף הבית</a>
-          <a class="nav-bar" href="../templates.html" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
-          <a class="nav-bar" href="../stories.html" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
-          <a class="nav-bar" href="../toolArsenalPage.html" style="text-decoration:none; color: #ffffff;">ארסנל כלים</a>
-        </div>
-      <input class="search-bar" type="text" placeholder="חפש/י">
+      <div class="right-section">
+        <a
+          class="nav-bar"
+          href="../homePage.html"
+          style="text-decoration: none; color: #d0d0d0"
+          >דף הבית</a
+        >
+        <a
+          class="nav-bar"
+          href="../templates.html"
+          style="text-decoration: none; color: #d0d0d0"
+          >תבניות שימושיות</a
+        >
+        <a
+          class="nav-bar"
+          href="../stories.html"
+          style="text-decoration: none; color: #d0d0d0"
+          >כתבות</a
+        >
+        <a
+          class="nav-bar"
+          href="../toolArsenalPage.html"
+          style="text-decoration: none; color: #ffffff"
+          >ארסנל כלים</a
+        >
+      </div>
+      <input class="search-bar" type="text" placeholder="חפש/י" />
     </div>
     <div class="the-screen">
       <h2>מתודת JTBD</h2>
@@ -41,30 +67,31 @@
         שלנו.תחילה - ננסה להבין באופן כללי מהי העבודה שיש לבצע:
       </p>
       <div class="graphics-container">
-      <div class="mini-card-frame">
-        <div class="mini-card">
-          <h3>הגדרה עצמית </h3>
-          <p>איך הייתי מתאר/ת את עצמי</p>
-        </div>
-        <div class="mini-card">
-          <h3>אופן השינוי</h3>
-          <p>להגביר או להקטין</p>
-        </div>
-        <div class="mini-card">
-          <h3>המוצר או התהליך</h3>
-          <p>על מה משפיעים</p>
-        </div>
-        <div class="mini-card">
-          <h3>הנושא</h3>
-          <p>מי מושפע מהשינוי</p>
-        </div>
-        <div class="mini-card">
-          <h3>הנושא</h3>
-          <p>באיזו סיטואציה העבודה מתרחשת</p>
-        </div>
-      </div>
-        <div class="card-container">
-          <div class="card">
+        <div id="cards_container" class="cards-container">
+          <div class="mini-card-frame">
+            <div class="mini-card">
+              <h3>הגדרה עצמית</h3>
+              <p>איך הייתי מתאר/ת את עצמי</p>
+            </div>
+            <div class="mini-card">
+              <h3>אופן השינוי</h3>
+              <p>להגביר או להקטין</p>
+            </div>
+            <div class="mini-card">
+              <h3>המוצר או התהליך</h3>
+              <p>על מה משפיעים</p>
+            </div>
+            <div class="mini-card">
+              <h3>הנושא</h3>
+              <p>מי מושפע מהשינוי</p>
+            </div>
+            <div class="mini-card">
+              <h3>הנושא</h3>
+              <p>באיזו סיטואציה העבודה מתרחשת</p>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
               <p>1</p>
               <textarea placeholder="בתור הורה אני רוצה"></textarea>
             </div>
@@ -84,55 +111,70 @@
               <p>5</p>
               <textarea placeholder="כשהם נוסעים ברכב"></textarea>
             </div>
-      </div>
-     
-      <p>אחרי שהבנו באופן כללי, ננתח את ה"ג'וב" בצורה מעמיקה יותר. כל "ג'וב"</p>
-      <p>מורכב מכמה חלקים: מחלק פרקטי, חלק רגשי, חלק אישי, חלק חברתי.</p>
+          </div>
+        </div>
+        <!-- the button to take the screen shot just choose the div you want to take a picture of -->
+        <button
+          class="captureButton"
+          onclick="takeScreenshotOfElement('cards_container')">
+          <img src="../pics/icons8-download-32.png" alt="download icon" />
+        </button>
 
-          <u>מה מניע אדם לקנות מרצדס?</u>
-           <div class="ellipse-frame">
-        <div class="ellipse">
-          <h3>העבודה האישית</h3>
-          <textarea placeholder="מרחב פרטי ונוח"></textarea>
-        </div>
-        <div class="ellipse">
-          <h3>העבודה הפרקטית</h3>
-          <textarea placeholder="דרך בטוחה ואמינה להגיע לעבודה והביתה"></textarea>
-        </div>
-        <div class="ellipse">
-          <h3>העבודה החברתית</h3>
-          <textarea placeholder="להראות לחברים ולמשפחה שיש לי את האמצעים לקנות מכונית יקרה"></textarea>
-        </div>
-        <div class="ellipse">
-          <h3>העבודה הרגשית</h3>
-          <textarea placeholder="להרגיש מתקדמ/ת ומעודכנ/ת בטכנולגיה"></textarea>
-        </div>
-      </div>
-      
-      <p>נשים לב שרוב האנשים יבחרו במוצר שעונה על הצרכים שלהם בדרך הזולה ביותר
-        בפלטפורמה אחת.</p>
-      
-      <p>"אם הייתי שואל את הלקוחות שלי מה הם רוצים הייתי מייצר סוסים מהירים יותר
-        ולא מכוניות" 
-      </p>
-      <p>הנרי פורד</p>
-      <p>איננו רוצים לשאול את המשתמש "מה היית רוצה שיהיה במוצר", כי אז נקבל
-        רשימת מכולת של פיצ'רים מסקרנים, מעניינים ולפעמים יקרים מאוד - אבל לאו
-        דווקא שימושיים.
-      </p>
-      <p>כדי לזהות את העבודה שצריכה להיעשות ניתן לבצע ראיונות עם לקוחות ולשאול
-        אותם שאלות כמו: מה אתה מנסה להשיג? מה התוצאה הסופית הרצויה? האם כבר היה
-        מוצר שהיה אמור לענות על הצרכים האלו?
-      </p>
-      <h3>מתי נשתמש?</h3>
-      <p>
-        נוכל להשתמש במתודה זו כשלקוח מעלה בעיות או בקשות למוצר כדי להבין אותו
-        בצורה יותר טובה ולזקק את הצורך והרצון האמיתי שלו.
-      </p>
-      <p style="width: 100%; text-align: center; margin-top: 3vw;">בהצלחה!</p>
-    </div>
-    </div>
-    
+        <p>
+          אחרי שהבנו באופן כללי, ננתח את ה"ג'וב" בצורה מעמיקה יותר. כל "ג'וב"
+        </p>
+        <p>מורכב מכמה חלקים: מחלק פרקטי, חלק רגשי, חלק אישי, חלק חברתי.</p>
 
-</body>
+        <u>מה מניע אדם לקנות מרצדס?</u>
+        <div class="ellipse-frame">
+          <div class="ellipse">
+            <h3>העבודה האישית</h3>
+            <textarea placeholder="מרחב פרטי ונוח"></textarea>
+          </div>
+          <div class="ellipse">
+            <h3>העבודה הפרקטית</h3>
+            <textarea
+              placeholder="דרך בטוחה ואמינה להגיע לעבודה והביתה"></textarea>
+          </div>
+          <div class="ellipse">
+            <h3>העבודה החברתית</h3>
+            <textarea
+              placeholder="להראות לחברים ולמשפחה שיש לי את האמצעים לקנות מכונית יקרה"></textarea>
+          </div>
+          <div class="ellipse">
+            <h3>העבודה הרגשית</h3>
+            <textarea
+              placeholder="להרגיש מתקדמ/ת ומעודכנ/ת בטכנולגיה"></textarea>
+          </div>
+        </div>
+
+        <p>
+          נשים לב שרוב האנשים יבחרו במוצר שעונה על הצרכים שלהם בדרך הזולה ביותר
+          בפלטפורמה אחת.
+        </p>
+
+        <p>
+          "אם הייתי שואל את הלקוחות שלי מה הם רוצים הייתי מייצר סוסים מהירים
+          יותר ולא מכוניות"
+        </p>
+        <p>הנרי פורד</p>
+        <p>
+          איננו רוצים לשאול את המשתמש "מה היית רוצה שיהיה במוצר", כי אז נקבל
+          רשימת מכולת של פיצ'רים מסקרנים, מעניינים ולפעמים יקרים מאוד - אבל לאו
+          דווקא שימושיים.
+        </p>
+        <p>
+          כדי לזהות את העבודה שצריכה להיעשות ניתן לבצע ראיונות עם לקוחות ולשאול
+          אותם שאלות כמו: מה אתה מנסה להשיג? מה התוצאה הסופית הרצויה? האם כבר
+          היה מוצר שהיה אמור לענות על הצרכים האלו?
+        </p>
+        <h3>מתי נשתמש?</h3>
+        <p>
+          נוכל להשתמש במתודה זו כשלקוח מעלה בעיות או בקשות למוצר כדי להבין אותו
+          בצורה יותר טובה ולזקק את הצורך והרצון האמיתי שלו.
+        </p>
+        <p style="width: 100%; text-align: center; margin-top: 3vw">בהצלחה!</p>
+      </div>
+    </div>
+  </body>
 </html>
