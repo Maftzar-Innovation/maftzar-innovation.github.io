@@ -4,7 +4,10 @@ function Func(value){
         return res.json();
     })
     .then(data => {
+        // console.log(value)
         const buttonsData = data.main_menu[0]["option"+value].buttons;
+        // console.log(buttonsData[])
+        const buttonsValue = data.main_menu[0]["option"+value].values;
         const existingButtonsContainer = document.querySelector('.cool')
         if (existingButtonsContainer) {
             existingButtonsContainer.remove();
@@ -18,9 +21,9 @@ function Func(value){
 
         buttonsData.forEach((buttonText, index) =>{
             const button = document.createElement('button');
-            button.classList.add('awsome')
+            button.classList.add('awesome')
             button.textContent = buttonText;
-            button.value = index + 1;
+            button.value = buttonsValue[buttonsData[index]];
             button.addEventListener('click',()=>{
                 Func(button.value);
             })
