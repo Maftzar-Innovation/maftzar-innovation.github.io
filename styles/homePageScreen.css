@@ -359,4 +359,9 @@ h1.website-header{
   background: #D0D0D0;
 }
 
+.awesome {
+  list-style-type: none;
+  align-self: center;
+  padding: 0;
+}
 
