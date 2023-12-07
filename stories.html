@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="styles\general.css" />
     <link rel="stylesheet" href="tiles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap"
       rel="stylesheet" />
-    <script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
-    <script src="node_modules/docx-preview/dist/docx-preview.js"></script>
-    <script src="stories.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="loadarticle.js" defer></script>
   </head>
 
   <body>
@@ -53,12 +51,10 @@
     <h2 class="page-header">כתבות</h2>
     <div class="cards-wrapper">
       <div id="tileContainer" class="tile-container"></div>
-      <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="read_story_csv.js"></script> -->
       <div id="word-container"></div>
     </div>
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
+      window.addEventListener("load", () => {
         createDivs(0);
       });
     </script>
