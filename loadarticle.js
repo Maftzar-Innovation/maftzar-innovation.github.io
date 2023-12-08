@@ -1,16 +1,14 @@
 window.addEventListener('message', function (event) {
     if (event.origin === "http://127.0.0.1:5500" ) {
-        const dataFromSite = event.data;
-
-        processDataFromSiteA(dataFromSite)
+        addData(event.data.msg)
     }
 })
-
-function processDataFromSiteA(data) {
-    addData(data.msg)
-}
-
 function addData(index) {
+    if (sessionStorage.temp != "undefined"){
+    } else {
+        sessionStorage.temp = index
+    }
+
     $(document).ready(function () {
         $.ajax({
             type: "GET",
@@ -97,10 +95,14 @@ function createDivs() {
                         const cardContainer = document.createElement("div");
                         cardContainer.className = "card-container";
                         const title = document.createElement('h3')
-                        title.style.textAlign = "center"
                         title.style.position = "relative"
-                        title.style.bottom = "6vw"
+                        title.style.bottom = "7vw"
                         title.textContent = values[1]
+                        const des = document.createElement("p")
+                        des.style.position = "relative"
+                        des.style.bottom = "7vw"
+                        des.style.fontSize = "1.1vw"
+                        des.textContent = values[2]
                         const img = document.createElement("img")
                         img.className = "card-pic"
                         img.src = values[4]
@@ -109,6 +111,7 @@ function createDivs() {
                         })
                         cardContainer.appendChild(img)
                         cardContainer.appendChild(title)
+                        cardContainer.appendChild(des)
                         tileContainer.appendChild(cardContainer)
 
                     }
@@ -124,6 +127,5 @@ function openSiteB(myValue) {
         siteBWindow.postMessage(dataToSend, "http://127.0.0.1:5500/exp.html");
     });
     }
-
 
 
