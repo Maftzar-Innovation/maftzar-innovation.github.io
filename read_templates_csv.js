@@ -27,6 +27,7 @@ $(document).ready(function () {
             let cardRow3;
 
             //Generate card rows content 
+            // addToVars([cardRow1, cardRow2, cardRow3], `<div class="row-container">`);
             cardRow1=`<div class="row-container">`;
             cardRow2=`<div class="row-container">`;
             cardRow3=`<div class="row-container">`;
@@ -40,7 +41,7 @@ $(document).ready(function () {
             cardRow3+=`<div class="scroller">`;
 
             //Generate image arry type=> 0=excel 1=pdf 2=ppt 3=word
-            let arr = ['pics/excel.PNG','pics/pdf.PNG','pics/powerpoint.PNG','pics/word.PNG'];
+            let arr = ['pics/excel.jpg','pics/pdf.jpg','pics/powerpoint.jpg','pics/word.jpg'];
             console.log();
 
             for (let i = 1; i < rows.length; i++) {
