@@ -19,14 +19,17 @@
     </form> -->
     <textarea id="editor"></textarea>
     <form id="myForm" method="post" action="http://127.0.0.1:5000/editor.html">
+
+      <input id="title" name="title">
+      
       <p id="amazing" style="display: none"></p>
       <button onclick="printData()">add</button>
     </form>
     <!-- <button type="button" onclick="printData()">print</button> -->
     <textarea
       form="myForm"
-      name="cool"
-      id="cool"
+      name="content"
+      id="content"
       style="display: none"></textarea>
     <script>
       const easyMDE = new EasyMDE({
@@ -37,7 +40,7 @@
         const data = easyMDE.markdown(easyMDE.value());
         document.querySelector("#amazing").innerHTML = data;
         const text = document.querySelector("#amazing").innerHTML;
-        document.querySelector("#cool").innerHTML = text;
+        document.querySelector("#content").innerHTML = text;
       }
     </script>
   </body>
