@@ -30,7 +30,7 @@
   position: relative;
   right: 52vw;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   height: 100vh;
   width: 25vw;
 }
@@ -43,17 +43,43 @@
   border-radius: 8px;
   border-width: 1.5px;
   height: 3.25vh;
-  width: 20vh; 
+  width: 25vh; 
   transition: 0.5s;
   color: white;
   position: fixed; 
-  left: 5vw;
+  left: 2vw;
   top: 8.25vh;
 }
-.search-bar:focus{
+
+.search-results {
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+.search-result {
+  position: relative;
+  margin-top: 1vh;
+  right: 86vw;
+  top: 13vh;
+  border-style: solid;
+  border-color: rgba(208, 208, 208);
+  border-radius: 3vh;
+  width: 10vw;
+  height: 3vw;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* .search-bar:focus{
   width:35vh; 
   left: 2.25vw;
-}
+} */
+
+
+
+
 /* body - text and button */
 .text{
   position: absolute;
@@ -253,6 +279,7 @@ h1.website-header{
   width: 18vw;
   height: 18vw;
   position: absolute;
+  padding-bottom: 12vh;
   right: 6vw;
   border: 2px solid rgba(255, 255, 255, 0.10);
   background: linear-gradient(134deg, #2F2F3B 0%, rgba(47, 47, 59, 0.00) 100%)
@@ -260,7 +287,6 @@ h1.website-header{
 
 .answer-rect {
   width: 15vw;
-  height: 2.25vw;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.10);
   background: #454452;
@@ -328,35 +354,66 @@ h1.website-header{
   top: 150vh;
 }
 
-.event-rect-container{
+#event-rect-container{
   display: flex;
   justify-content: center;
-  column-gap: 40px;
+  column-gap: 2vw;
   position: absolute;
   top: 160vh;
   width: 100%;
+  padding-bottom: 20vh;
 }
 .event-rect{
-  display: flex;
-  flex-direction: column;
+  text-align: center;
   width: 12vw;
   height: 12vw;
   border-radius: 32px;
+  padding-top: 7vh;
   background: linear-gradient(134deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%);
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
+.event-date {
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.event-text {
+  font-size: 2vw;
+}
+
 .contact-frame {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 12vw;
+  color: black;
+  font-size: 100%;
+  font-weight: bold;
+  height: 5vw;
+  width: 12vw;
   position: absolute;
-  top: 30vh;
-  width: 100%;
-  margin-top: 150px;
-  border-radius: 32px 32px 0px 0px;
-  background: #D0D0D0;
+  bottom: 0vh;
+  border-radius: 4vw;
+  background:rgba(208, 208, 208);
+  padding-top: 3vh;
+  padding-right: 1vw;
+  position: absolute;
+  top: 9vh;
+  left: -5vw;
+  z-index: 3;
+  display: none;
+  
+}
+
+.contact-button{
+  background-color: #D0D0D0;
+  border-radius: 15vw;
+  width: 4vw;
+  height: 7vh;
+  position: fixed;
+  left: 15vw;
+  top: 7vh;
+}
+
+.contact-button:hover .contact-frame {
+  display: inline-block;
 }
 
 .awesome {

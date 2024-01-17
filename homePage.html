@@ -28,8 +28,32 @@
           <a class="nav-bar" href="templates.html" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
           <a class="nav-bar" href="stories.html" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
           <a class="nav-bar" href="toolArsenalPage.html" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
-        </div>
-          <input class="search-bar" type="text" placeholder="חפש/י">
+          <div class="contact-button">
+            <img src="pics/contact us.png" style="width: 3vw; height: 6vh; position: absolute; top: 0.5vh; left: 0.5vw; display: inline-block;">
+          <div class="contact-frame">
+            <span style="display: flex; flex-direction: column; row-gap: 10px">
+              <span style="display: flex; align-items: center; column-gap: 5px">
+                <img
+                  src="pics\icons8-phone-50.png"
+                  alt="phone pic"
+                  style="width: 20px; height: 20px"
+                />
+                <span>0558838257</span>
+              </span>
+              <span style="display: flex; align-items: center; column-gap: 5px">
+                <img
+                  src="pics\icons8-mail-24.png"
+                  alt="phone pic"
+                  style="width: 24px; height: 24px"
+                />
+                <span>hila9il@gmail.com</span>
+              </span>
+            </span>   
+            </div> 
+            </div>     
+</div>
+          <input class="search-bar" id="search-bar" oninput="searchFunction()" type="text" placeholder="חפש/י">
+          <div id="search-results"></div>
       </div>
       <!-- body - text and button -->
       <div class="text">
@@ -181,7 +205,6 @@
      <div class="screen3">
       <div class="rect-background">
         <div class="question-container">
-          
         </div>
         <div>
           <img class="hi-pic" src="pics\Baymax-hi.webp">
@@ -213,62 +236,13 @@
           <div class="card-rect">
             <h3>כתבות</h3>
             <p>
-              יוזקייסים, סיכומים וטיפים קצרים שימושיים ומעניינים שמאפשרים ללמוד ולהכיר את עולם החדשנות, דוגמאות שמציגות איך החדשנות מייושמת בצה”ל ןבארגונים אחרים. וסיפורים מעוררי השראה.
+              יוזקייסים, סיכומים וטיפים קצרים שימושיים ומעניינים שמאפשרים ללמוד ולהכיר את עולם החדשנות, דוגמאות שמציגות איך החדשנות מייושמת בצה”ל ובארגונים אחרים. וסיפורים מעוררי השראה.
             </p>
           </div>
       </div>
 
         <h3 class="events-header" style="width: 100%; text-align: center;">הזדמנויות חדשנות קרובות</h3>
-        <div class="event-rect-container">
-          <div class="event-rect">
-          <p>29.11</p>
-          <p>וובינר</p>
-          </div>
-          <div class="event-rect">
-            <p>29.11</p>
-            <p>וובינר</p>
-            </div>
-            <div class="event-rect">
-              <p>29.11</p>
-              <p>וובינר</p>
-              </div>
-              <div class="event-rect">
-                <p>29.11</p>
-                <p>וובינר</p>
-                </div>
-                <div class="event-rect">
-                  <p>29.11</p>
-                  <p>וובינר</p>
-                </div>
-                <div class="event-rect">
-                  <p>29.11</p>
-                  <p>וובינר</p>
-                  </div>
-
-                  <div class="contact-frame">
-                    <span>
-                      <p style="color: #25232e">צרו קשר</p>
-                    <span style="display: flex; flex-direction: column; row-gap: 10px">
-                      <span style="display: flex; align-items: center; column-gap: 5px">
-                        <img
-                          src="pics\icons8-phone-50.png"
-                          alt="phone pic"
-                          style="width: 20px; height: 20px"
-                        />
-                        <span>0558838257</span>
-                      </span>
-                      <span style="display: flex; align-items: center; column-gap: 5px">
-                        <img
-                          src="pics\icons8-mail-24.png"
-                          alt="phone pic"
-                          style="width: 24px; height: 24px"
-                        />
-                        <span>hila9il@gmail.com</span>
-                      </span>
-                    </span>
-                  </div>
-        
-        </div>
+        <div id="event-rect-container"></div>
      </div>
      <script>
             window.addEventListener("DOMContentLoaded",()=>{
