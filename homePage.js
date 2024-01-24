@@ -49,7 +49,7 @@ async function loadData() {
    'innovation_tools/jtbd.html', 'innovation_tools/mvp.html'];
 
 
-   //get data from toll arsenal page
+   //get data from toםl arsenal page
   for (let i = 0; i < partsToSearch.length; i++) {  
     // Fetch HTML content for a given file
     const response = await fetch(`${partsToSearch[i]}`);
@@ -64,12 +64,13 @@ async function loadData() {
     const headerElement = tempElement.querySelector('.page-header');
     const webPartData = {
       title: `${headerElement.textContent}`,
+      location: 'ארסנל כלים',
       link: `${partsToSearch[i]}`
     }
 
     websiteData.push(webPartData);
 
-    
+
     //get the data from the templates csv file
       fetch('templates.csv')
       .then(response => response.text())
@@ -95,6 +96,7 @@ async function loadData() {
         if (title.toLowerCase().includes(searchInput.toLowerCase())) {
             csvResults.push({
                 title: title,
+                location: 'תבניות שימושיות',
                 link: columns[3],
             });
         }
@@ -117,7 +119,7 @@ async function loadData() {
         results.forEach(result => {
             const resultDiv = document.createElement('div');
             resultDiv.setAttribute('class', 'search-result');
-            resultDiv.innerHTML = `<p>${result.title}</p>`;
+            resultDiv.innerHTML = `<p>${result.title} - ${result.location}</p>`;
             document.getElementById('search-results').appendChild(resultDiv);
             resultDiv.addEventListener('click', () => {
                 window.location.href = result.link;
