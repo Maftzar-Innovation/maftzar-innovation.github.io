@@ -121,10 +121,10 @@ function createDivs() {
 
 function openSiteB(myValue) {
     let dataToSend = { msg: myValue };
-    const siteBWindow = window.open("articles.html");
+    const siteBWindow = window.open("articles.aspx");
 
     siteBWindow.addEventListener("load", function () {
-        siteBWindow.postMessage(dataToSend, "http://127.0.0.1:5500/exp.html");
+        siteBWindow.postMessage(dataToSend, "http://127.0.0.1:5500/exp.aspx");
     });
     }
 

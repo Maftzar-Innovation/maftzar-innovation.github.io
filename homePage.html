@@ -63,7 +63,7 @@
       <h1 class="website-header">המדריך לסטרטאפיסט הצבאי</h1>
       <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
       </p>
-      <button class="to-arsenal-button" onclick="document.location='toolArsenalPage.html'">לארסנל</button>
+      <button class="to-arsenal-button" onclick="document.location='toolArsenalPage.aspx'">לארסנל</button>
       </div>
     </div>
    
