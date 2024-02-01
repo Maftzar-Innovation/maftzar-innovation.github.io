@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>The Innovation Website</title>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <link rel="stylesheet" href="styles\homePageScreen.css">
     <link rel="stylesheet" href="styles\general.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +27,10 @@
       <!--header - contains navigation bar and search bar-->
       <div class="header">
         <div class="right-section">
-          <a class="nav-bar" href="homePage.html" style="text-decoration:none; color: #ffffff;">דף הבית</a>
-          <a class="nav-bar" href="templates.html" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
-          <a class="nav-bar" href="stories.html" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
-          <a class="nav-bar" href="toolArsenalPage.html" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
+          <a class="nav-bar" href="homePage.aspx" style="text-decoration:none; color: #ffffff;">דף הבית</a>
+          <a class="nav-bar" href="templates.aspx" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
+          <a class="nav-bar" href="stories.aspx" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
+          <a class="nav-bar" href="toolArsenalPage.aspx" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
           <div class="contact-button">
             <img src="pics/contact us.png" style="width: 3vw; height: 6vh; position: absolute; top: 0.5vh; left: 0.5vw; display: inline-block;">
           <div class="contact-frame">
