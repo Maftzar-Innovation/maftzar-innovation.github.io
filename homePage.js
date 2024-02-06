@@ -44,9 +44,9 @@ function createEventRect(){
   
 }
 async function loadData() {
-  let partsToSearch = ['innovation_tools/accelerator.aspx', 'innovation_tools/design_thinking.aspx',
-   'innovation_tools/hackathon.aspx', 'innovation_tools/jtbd-DESKTOP-UB4M0PG.aspx', 'innovation_tools/incubator.aspx', 
-   'innovation_tools/jtbd.aspx', 'innovation_tools/mvp.aspx'];
+  let partsToSearch = ['../innovation_tools/accelerator.aspx', '../innovation_tools/design_thinking.aspx',
+   '../innovation_tools/hackathon.aspx', '../innovation_tools/jtbd-DESKTOP-UB4M0PG.aspx', '../innovation_tools/incubator.aspx', 
+   '../innovation_tools/jtbd.aspx', '../innovation_tools/mvp.aspx'];
 
 
    //get data from toםl arsenal page
