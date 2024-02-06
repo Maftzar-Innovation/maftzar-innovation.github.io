@@ -69,6 +69,7 @@ async function loadData() {
     }
 
     websiteData.push(webPartData);
+    console.log(webPartData);
 
 
     //get the data from the templates csv file
