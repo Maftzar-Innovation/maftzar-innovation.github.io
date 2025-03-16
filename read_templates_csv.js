@@ -87,13 +87,13 @@ $(document).ready(function () {
             cardRow2+=`</div>`;
             cardRow3+=`</div>`;
 
-            cardRow1+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
-            cardRow2+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
-            cardRow3+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll()">`;
+            cardRow1+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll(this)">`;
+            cardRow2+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll(this)">`;
+            cardRow3+=`<img class="left" src="pics/next_icon.png" onclick="leftScroll(this)">`;
             
-            cardRow1+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
-            cardRow2+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
-            cardRow3+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll()">`;
+            cardRow1+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll(this)">`;
+            cardRow2+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll(this)">`;
+            cardRow3+=`<img class="right" src="pics/next_icon.png" onclick="rightScroll(this)">`;
             
             cardRow1+=`</div>`;
             cardRow2+=`</div>`;

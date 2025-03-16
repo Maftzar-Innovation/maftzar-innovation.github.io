@@ -1,4 +1,3 @@
-
 let searchInput;
 let websiteData = [];
 let csvData;
@@ -129,16 +128,26 @@ function searchFunction() {
     }
 }
 
-function leftScroll() {
+function leftScroll(element = "") {
     console.log("got into left scroll function");
-    const left = document.querySelector(".scroller");
-    left.scrollBy(-400, 0);
+    if (element) {
+        const left = element.closest(".row-container").querySelector(".scroller");
+        left.scrollBy(-400, 0);
+    } else {
+        const left = document.querySelector(".scroller");
+        left.scrollBy(-400, 0);
+    }
 }
 
-function rightScroll() {
+function rightScroll(element = "") {
     console.log("got into right scroll function");
-    const right = document.querySelector(".scroller");
-    right.scrollBy(400, 0);
+    if (element) {
+        const right = element.closest(".row-container").querySelector(".scroller");
+        right.scrollBy(400, 0);
+    } else {
+        const right = document.querySelector(".scroller");
+        right.scrollBy(400, 0);
+    }
 }
 
 function createQuestions(value) {
