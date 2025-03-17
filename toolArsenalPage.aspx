@@ -20,10 +20,10 @@
 <!--header - contains navigation bar and search bar-->
     <div class="header">
         <div class="right-section">
-            <a class="nav-bar" href="../homePage.aspx" style="text-decoration:none; color: #d0d0d0;">דף הבית</a>
-            <a class="nav-bar" href="../templates.aspx" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
-            <a class="nav-bar" href="../stories.aspx" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
-            <a class="nav-bar" href="../toolArsenalPage.aspx" style="text-decoration:none; color: #ffffff;">ארסנל כלים</a>
+            <a class="nav-bar" href="./homePage.aspx" style="text-decoration:none; color: #d0d0d0;">דף הבית</a>
+            <a class="nav-bar" href="./templates.aspx" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
+            <a class="nav-bar" href="./stories.aspx" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
+            <a class="nav-bar" href="./toolArsenalPage.aspx" style="text-decoration:none; color: #ffffff;">ארסנל כלים</a>
         </div>
       <input class="search-bar" type="text" placeholder="חפש/י">
     </div>

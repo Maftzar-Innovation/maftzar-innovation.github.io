@@ -1,43 +1,486 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/rubik-one');
+
+/* ====screens==== */
+.commandBarWrapper .ms-CommandBar{
+  background-color: transparent;
+  background-color: rgb(37, 35, 46);
+}
+ #spSiteHeader{
+  background-color: rgb(37, 35, 46);
+
+ }
+
+.mainHeader-108.mainHeader-108.mainHeader-108.mainHeader-108.mainHeader-108{
+  background-color: rgb(37, 35, 46);
+
+}
+.screen1{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(37, 35, 46);
+}
+.screen2{
+  height: 100vh;
+  width: 100%;
+}
+.screen3{
+  position: absolute;
+  top: 220vh;
+  width: 100%;
+}
+
+/* baymax and gradiant background */
+.baymax-pic
+{
+  position: absolute;
+  right: 52vw;
+  bottom: 251vh;
+  z-index: 3;
+  height: 39vw;
+}
+
+.gradiant-pic
+{
+  position: relative;
+  right: 52vw;
+  top: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 25vw;
+}
+.search-bar
+{
+  text-align: right;
+  background: #25232E;
+  border-color:white;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1.5px;
+  height: 3.25vh;
+  width: 25vh; 
+  transition: 0.5s;
+  color: white;
+  position: fixed; 
+  left: 2vw;
+  top: 8.25vh;
+}
+
+.search-results {
+ display: flex;
+ flex-direction: column;
+ max-height: 455px;
+ overflow-y: auto;
+ margin-top: 14vh;
+}
+
+.search-result {
+  position: relative;
+  margin-top: 1vh;
+  right: 86vw;
+  border-style: solid;
+  border-color: rgba(208, 208, 208);
+  border-radius: 3vh;
+  width: 10vw;
+  height: auto;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* body - text and button */
+.text{
+  position: absolute;
+  width: 35vw; 
+  top: 18vh;
+  right: 7vw;
+}
+
+h1.website-header{
+  margin-top: 4vh;
+}
+
+
+.to-arsenal-button{
+  position: relative;
+  margin-top: 4vh;
+  font-family: 'Rubik One';
+  font-weight: bold;
+  background-color: #D0D0D0;
+  border-style: solid;
+  border-color: #D0D0D0;
+  border-radius: 5px;
+  right: 12vw;
+  height: 2vw;
+  width: 5vw;
+  cursor: pointer;
+}
+
+/* 2nd screen */
+.card-pic{
+  height: 9vw;
+  min-width: 15vw;
+  margin-right: 1vw;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.10);
+  cursor: pointer;
+}
+
+.card-container{
+  height: 10vw;
+  min-width: 15vw;
+  max-width: 15vw;
+  margin-left: 1vw;
+}
+
+.story-header,.story-description{
+  position: relative;
+  bottom: 4vw;
+  right: 1.75vw;
+}
+
+.story-header{
+  font-size: 1vw;
+  margin-bottom: 0;
+}
+
+.story-description{
+  font-size: 0.75vw;
+  margin-top: 0;
+}
+
+.scroller{
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  position: absolute;
+  right: 8vw;
+  top: 55vw;
+}
+
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+
+.left{
+  cursor: pointer;
+  width: 2.5vw;
+  height: 2.5vw;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  top: 58vw;
+  left: 8vw;
+}
+.right{
+  cursor: pointer;
+  width: 2.5vw;
+  height: 2.5vw;
+  position: absolute;
+  top: 58vw;
+  right: 6.5vw;
+}
+
+.people-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 143vh;
+  right: 10vw;
+  height: 32vw;
+  width: 80vw;
+}
+
+.first-row , .third-row{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-evenly;
+  height: 10vw;
+  width: 72vw;
+}
+
+.second-row{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  height: 10vw;
+  width: 63vw;
+  justify-content: space-evenly;
+
+}
+
+.first-row .img, .second-row .img, .third-row img{
+  border-radius: 50%;
+  min-width: 0;
+  height: 7vw;
+  width: 7vw;  
+  object-fit: cover;
+  transition: opacity 0.25s;
+}
+
+.img-container{
+  border-radius: 50%;
+  min-width: 0;
+  height: 7vw;
+  width: 7vw;  
+  background-color:#e3e0e0;
+}
+
+.person-name{
+  font-size: 0.8vw;
+  margin-top: 0;
+  margin-bottom: 0.25vw;
+  font-weight: bold;
+  width: 6vw;
+  position: relative;
+  right: 0.7vw;
+  text-align: center;
+  color: #ffffff;
+}
+.person-job{
+  font-size: 0.8vw;
+  position: relative;
+  bottom: 6.5vw;
+  width: 6.5vw;
+  right: 0.2vw;
+  z-index: 2;
+  cursor: pointer;
+  color: #25232E;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+}
+
+.img-container:hover .img{
+  opacity: 0;
+  cursor: pointer;
+}
+.img-container:hover .person-job{
+  opacity: 1;
+}
+
+
+/* 3nd screen */
+.rect-background {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 0px;
+  flex-grow: 1;
+  width:100%;
+  height: 20vw;
+  position: absolute;
+  border: 0px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(240deg, rgba(159, 144, 176, 0.43) 4.57%, rgba(148, 124, 174, 0.00) 93.23%);
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 40px;
+  border-radius: 32px;
+  width: 18vw;
+  height: 18vw;
+  position: absolute;
+  padding-bottom: 12vh;
+  right: 6vw;
+  border: 2px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(134deg, #2F2F3B 0%, rgba(47, 47, 59, 0.00) 100%)
+}
+
+.answer-rect {
+  width: 15vw;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.10);
+  background: #454452;
+  margin-bottom: 0.5vw; 
+  transition: 0.5s;
+}
+.answer-rect:hover{
+  cursor: pointer;
+}
+.answer-rect:active{
+  background: #6b6a7a;
+}
+
+.hi-pic{
+  height: 18vw;
+  position: absolute;
+  top: 6vw;
+  right: 45vw;
+}
+
+.questioner-header{
+  width: 630px;
+  text-align: center;
+  position: absolute;
+  left: 4vw;
+  top: 5vw;
+    color: white;
+  font-family: 'Rubik One';
+  font-size: 300%;
+  font-weight: 600;
+}
+
+.questioner-per{
+  width: 630px;
+  text-align: center;
+  position: absolute;
+  left: 4vw;
+  top: 15vw;
+}
+
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 80vh;
+  right: 10vw;
+  width: 80%;
+}
+
+.card-rect{
+  display: flex;
+    align-items: center;
+    padding: 0px 45px;
+    flex-direction: column;
+    width: 18vw;
+    height: 28vw;
+    border-radius: 32px;
+    background: linear-gradient(134deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%);
+    box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.events-header{
+  position: absolute;
+  top: 150vh;
+}
+
+#event-rect-container{
+  display: flex;
+  justify-content: center;
+  column-gap: 2vw;
+  position: absolute;
+  top: 160vh;
+  width: 100%;
+  padding-bottom: 20vh;
+}
+.event-rect{
+  text-align: center;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 32px;
+  padding-top: 7vh;
+  background: linear-gradient(134deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%);
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.event-date {
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.event-text {
+  font-size: 2vw;
+}
+
+.contact-frame {
+  color: black;
+  font-size: 100%;
+  font-weight: bold;
+  height: 5vw;
+  width: 12vw;
+  position: absolute;
+  bottom: 0vh;
+  border-radius: 4vw;
+  background:rgba(208, 208, 208);
+  padding-top: 3vh;
+  padding-right: 1vw;
+  position: absolute;
+  top: 9vh;
+  left: -5vw;
+  z-index: 3;
+  display: none;
+  
+}
+
+.contact-button{
+  background-color: #D0D0D0;
+  border-radius: 15vw;
+  width: 4vw;
+  height: 7vh;
+  position: fixed;
+  left: 15vw;
+  top: 7vh;
+}
+
+.contact-button:hover .contact-frame {
+  display: inline-block;
+}
+
+.awesome {
+  list-style-type: none;
+  align-self: center;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .gradiant-pic{
+    width: 15vw;
+    height: 100%;
+    right: 50%;
+  }
+
+}
+    </style>
     <title>The Innovation Website</title>
     <!-- <meta charset="UTF-8"> -->
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" href="styles\homePageScreen.css">
-    <link rel="stylesheet" href="styles\general.css">
+    <link rel="stylesheet" href="../styles\homePageScreen.css">
+    <link rel="stylesheet" href="../styles\general.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="pics/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap" rel="stylesheet">
 
-    <script src="homePage.js" defer></script>
+    <script src="../homePage.js" defer></script>
   </head>
   
   <body>
     <!-- 1st screen -->
     <div class="screen1">
       <!-- robot and gradiant background -->
-      <img src="pics\hilaRobotResult.png" class="baymax-pic">
-      <img src="pics\gradiant.jpg" class="gradiant-pic">
+      <img src="../pics\hilaRobotResult.png" class="baymax-pic">
+      <img src="../pics\gradiant.jpg" class="gradiant-pic">
 
       <!--header - contains navigation bar and search bar-->
       <div class="header">
         <div class="right-section">
-          <a class="nav-bar" href="homePage.aspx" style="text-decoration:none; color: #ffffff;">דף הבית</a>
-          <a class="nav-bar" href="templates.aspx" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
-          <a class="nav-bar" href="stories.aspx" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
-          <a class="nav-bar" href="toolArsenalPage.aspx" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
+          <a class="nav-bar" href="../homePage.aspx" style="text-decoration:none; color: #ffffff;">דף הבית</a>
+          <a class="nav-bar" href="../templates.aspx" style="text-decoration:none; color: #d0d0d0;">תבניות שימושיות</a>
+          <a class="nav-bar" href="../stories.aspx" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
+          <a class="nav-bar" href="../toolArsenalPage.aspx" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
           <div class="contact-button">
-            <img src="pics/contact us.png" style="width: 3vw; height: 6vh; position: absolute; top: 0.5vh; left: 0.5vw; display: inline-block;">
+            <img src="../pics/contact us.png" style="width: 3vw; height: 6vh; position: absolute; top: 0.5vh; left: 0.5vw; display: inline-block;">
           <div class="contact-frame">
             <span style="display: flex; flex-direction: column; row-gap: 10px">
               <span style="display: flex; align-items: center; column-gap: 5px">
                 <img
-                  src="pics\icons8-phone-50.png"
+                  src="../pics\icons8-phone-50.png"
                   alt="phone pic"
                   style="width: 20px; height: 20px"
                 />
@@ -45,7 +488,7 @@
               </span>
               <span style="display: flex; align-items: center; column-gap: 5px">
                 <img
-                  src="pics\icons8-mail-24.png"
+                  src="../pics\icons8-mail-24.png"
                   alt="phone pic"
                   style="width: 24px; height: 24px"
                 />
@@ -63,7 +506,7 @@
       <h1 class="website-header">המדריך לסטרטאפיסט הצבאי</h1>
       <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
       </p>
-      <button class="to-arsenal-button" onclick="document.location='toolArsenalPage.aspx'">לארסנל</button>
+      <button class="to-arsenal-button" onclick="document.location='../toolArsenalPage.aspx'">לארסנל</button>
       </div>
     </div>
    
@@ -72,131 +515,131 @@
     <div class="screen2">
         <div id="tileContainer" class="scroller"></div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="read_story_csv.js"></script>
+        <script src="../read_story_csv.js"></script>
 
-        <img class="left" src="pics\next_icon.png" onclick="leftScroll()">
-        <img class="right" src="pics\next_icon.png" onclick="rightScroll()">
+        <img class="left" src="../pics\next_icon.png" onclick="leftScroll()">
+        <img class="right" src="../pics\next_icon.png" onclick="rightScroll()">
         
 
       <div class="people-container">
         <h3 style="width: 100%; text-align: center; margin-bottom: 2vw;">רמדי חדשנות</h3>  
         <div class="first-row">
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
         </div>
         <div class="second-row">
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
         </div>
         <div class="third-row">
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
           <div class="img-container">
-            <img class="img" src="pics\rmtcl.jpg">
+            <img class="img" src="../pics\rmtcl.jpg">
               <p class="person-name">רא"ל הרצי הלוי</p>
               <p class="person-job">ראש המטה הכללי</p>
           </div>
@@ -210,7 +653,7 @@
         <div class="question-container">
         </div>
         <div>
-          <img class="hi-pic" src="pics\Baymax-hi.webp">
+          <img class="hi-pic" src="../pics\Baymax-hi.webp">
         </div>
         <span>
           <h2 class="questioner-header">אתם לא יודעים מאיפה להתחיל?</h2>
