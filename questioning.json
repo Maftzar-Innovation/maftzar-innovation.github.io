@@ -26,50 +26,28 @@
         ],
         "values": ["1_1", "1_2", "1_3", "1_4", "1_5", "0"]
       },
+      
       "menu1_1": {
-        "question": "יש מספר כלים ומתודות בנושא (+קישור לאפיון הבעיה בעמוד ארסנל)",
-        "buttons": ["חזרה"],
-        "values": ["1"]
+        "question": "יש מספר כלים ומתודות בנושא- ",
+        "buttons": ["לדף האפיון", " חזרה"], 
+        "values": ["innovation_tools/characterization.html", "1"]
       },
+
       "menu1_2": {
         "question": "יש כמה שיטות עבודה, ניתן לחקור עליהן בעמוד ארסנל כלים",
         "buttons": ["POC", "MVP", "Agile", "חזרה"],
-        "values": ["1_2_1", "1_2_2", "1_2_3", "1"]
+        "values": ["innovation_tools/Poc.html", "innovation_tools/MVP.html", "innovation_tools/Agile.html", "1"]
       },
-      "menu1_2_1": {
-        "question": "קישור לכל מעמוד הארסנל",
-        "buttons": ["חזרה"],
-        "values": ["1_2"]
-      },
-      "menu1_2_2": {
-        "question": "קישור לכל מעמוד הארסנל",
-        "buttons": ["חזרה"],
-        "values": ["1_2"]
-      },
-      "menu1_2_3": {
-        "question": "קישור לכל מעמוד הארסנל",
-        "buttons": ["חזרה"],
-        "values": ["1_2"]
-      },
+      
       "menu1_3": {
         "question": "יש כמה כלים בנושא, ניתן לחקור אותם בעמוד ארסנל כלים",
         "buttons": ["מודל הקנבס", "SCAMPER", "חזרה"],
-        "values": ["1_3_1", "1_3_2", "1"]
-      },
-      "menu1_3_1": {
-        "question": "קישור לכל מעמוד הארסנל",
-        "buttons": ["חזרה"],
-        "values": ["1_3"]
-      },
-      "menu1_3_2": {
-        "question": "קישור לכל מעמוד הארסנל",
-        "buttons": ["חזרה"],
-        "values": ["1_3"]
+        "values": ["innovation_tools/canvas_model.html", "innovation_tools/scamper.html", "1"]
       },
       "menu1_4": {
-        "question": "אפשר לקרוא על שיטות מדידה כאן (קישור)",
-        "buttons": ["חזרה"],
-        "values": ["1"]
+        "question": "אפשר לקרוא על שיטות לתחקור מדידה כאן)",
+        "buttons": ["KPI's","RICE","חזרה"],
+        "values": ["innovation_tools/KPIS.html","innovation_tools/rice.html","1"]
       },
       "menu1_5": {
         "question": "נסו לקרוא על פיץ' (קישור)",
@@ -88,8 +66,8 @@
       },
       "menu3_1": {
         "question": "אלה רמדי החדשנות בצבא  (+קישור לחלק של רמדי חדשנות)",
-        "buttons": ["חזרה"],
-        "values": ["3"]
+        "buttons": ["רמדי חדשנות","חזרה"],
+        "values": ["homepage.html#innovation-contacts","3"]
       },
       "menu3_2": {
         "question": "אלה תוכניות ומנגנוני החדשנות הקיימים (קישור לחלק של הזדמנויות חדשנות)",
@@ -97,37 +75,22 @@
         "values": ["3"]
       },
       "menu4": {
-        "question": "כדאי לבחון את עמוד התבניות השימושיות שמרכז טמפלייטים מוכנים לשימוש במגוון פורמטים! (+קישור)",
-        "buttons": ["חזרה"],
-        "values": ["0"]
+        "question": "כדאי לבחון את עמוד התבניות השימושיות שמרכז טמפלייטים מוכנים לשימוש במגוון פורמטים!",
+        "buttons": ["לתבניות שימושיות","חזרה"],
+        "values": ["templates.html","0"]
       },
       "menu5": {
-        "question": "כדאי לבחון את עמוד ארסנל הכלים שמרכז כלי חדשנות מוכנים לשימוש! (+קישור)",
-        "buttons": ["חזרה"],
-        "values": ["0"]
+        "question": "כדאי לבחון את עמוד ארסנל הכלים שמרכז כלי חדשנות מוכנים לשימוש! ",
+        "buttons": ["לארסנל הכלים","חזרה"],
+        "values": ["toolArsenalPage.html","0"]
       },
       "menu6": {
-        "question": "איזה סוג של אירוע",
-        "buttons": ["האקתון", "וובינר", "דיזיין ספרינט", "חזרה"],
-        "values": ["6_1", "6_2", "6_3", "0"]
-      },
-      "menu6_1": {
-        "question": "העמוד הזה יעזור לך לערוך האקתון (+קישור)",
-        "buttons": ["חזרה"],
-        "values": ["6"]
-      },
-      "menu6_2": {
-        "question": "העמוד הזה יעזור לך לערוך וובינר (+קישור)",
-        "buttons": ["חזרה"],
-        "values": ["6"]
-      },
-      "menu6_3": {
-        "question": "העמוד הזה יעזור לך לערוך דיזיין ספרינט (+קישור)",
-        "buttons": ["חזרה"],
-        "values": ["6"]
+        "question": "קבלו השראה ממגוון סוגי האירועים",
+        "buttons": ["האקתון", "וובינר", "אקסלרטור", "חזרה"],
+        "values": ["innovation_tools/hackathon.html", "innovation_tools/webinar.html", "innovation_tools/accelerator.html", "0"]
       },
       "menu7": {
-        "question": "אפשר ליצור איתנו קשר בכתוב המייל maghq@idf.il",
+        "question": "ניתן ליצור איתנו קשר בכתוב המייל maghq@idf.il",
         "buttons": ["חזרה"],
         "values": ["0"]
       }

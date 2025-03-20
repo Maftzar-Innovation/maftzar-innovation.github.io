@@ -13,26 +13,8 @@ window.addEventListener('load', () => {
 function createEventRect() {
     //creates the event rectangles 
     let textArray = [
-        {
-            date: '29.11',
-            text: 'וובינר'
-        },
-        {
-            date: '29.11',
-            text: 'וובינר'
-        },
-        {
-            date: '29.11',
-            text: 'וובינר'
-        },
-        {
-            date: '29.11',
-            text: 'וובינר'
-        },
-        {
-            date: '29.11',
-            text: 'וובינר'
-        },
+        
+        
     ]
     for (let i = 0; i < textArray.length; i++) {
         let newDiv = document.createElement('div');
@@ -71,13 +53,14 @@ async function loadData() {
         console.log(webPartData);
 
 
-        //get the data from the templates csv file
+        
+    }
+    //get the data from the templates csv file
         fetch('templates.csv')
             .then(response => response.text())
             .then(data => {
                 csvData = data;
             });
-    }
 }
 
 
@@ -152,35 +135,59 @@ function rightScroll(element = "") {
 
 function createQuestions(value) {
     fetch('questioning.json')
-        .then((res) => {
-            return res.json();
-        })
+        .then((res) => res.json())
         .then(data => {
-            const currentMenu = data.main_menu[0]["menu" + value];
-            const { buttons, question, values } = currentMenu
+            if (!data.main_menu || !data.main_menu[0]) {
+                console.error("Invalid JSON structure!");
+                return;
+            }
 
-            const existingButtonsContainer = document.querySelector('.screen3 .rect-background .question-container .awesome')
+            const currentMenu = data.main_menu[0]["menu" + value];
+            if (!currentMenu) {
+                console.error("Menu item not found for value:", value);
+                return;
+            }
+
+            const { buttons, question, values } = currentMenu;
+
+            const existingButtonsContainer = document.querySelector('.screen3 .rect-background .question-container .awesome');
             if (existingButtonsContainer) {
                 existingButtonsContainer.remove();
             }
+
             const questionContainer = document.querySelector('.screen3 .rect-background .question-container');
             const buttonsContainer = document.createElement('ul');
-            buttonsContainer.className = "awesome"
+            buttonsContainer.className = "awesome";
             buttonsContainer.style.listStyleType = "none";
 
-            const questionElement = document.createElement('h3')
-            questionElement.textContent = question
-            buttonsContainer.appendChild(questionElement)
+            const questionElement = document.createElement('h3');
+            questionElement.textContent = question;
+            buttonsContainer.appendChild(questionElement);
 
             buttons.forEach((buttonText, index) => {
                 const button = document.createElement('li');
-                button.classList.add('answer-rect')
+                button.classList.add('answer-rect');
                 button.textContent = buttonText;
-                button.addEventListener('click', () => {
-                    createQuestions(values[index]);
-                })
+
+                if (values[index].includes('.html')) {
+                    button.addEventListener('click', () => {
+                        window.location.href = values[index];
+                    });
+                } else {
+                    button.addEventListener('click', () => {
+                        createQuestions(values[index]);
+                    });
+                }
+
                 buttonsContainer.appendChild(button);
-            })
-            questionContainer.appendChild(buttonsContainer)
+            });
+
+            questionContainer.appendChild(buttonsContainer);
         })
+        .catch(error => console.error("Error fetching JSON:", error));
 }
+
+// Start the first question on page load
+document.addEventListener('DOMContentLoaded', () => {
+    createQuestions("0");
+});
