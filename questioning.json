@@ -36,7 +36,7 @@
       "menu1_2": {
         "question": "יש כמה שיטות עבודה, ניתן לחקור עליהן בעמוד ארסנל כלים",
         "buttons": ["POC", "MVP", "Agile", "חזרה"],
-        "values": ["innovation_tools/Poc.html", "innovation_tools/MVP.html", "innovation_tools/Agile.html", "1"]
+        "values": ["innovation_tools/POC.html", "innovation_tools/mvp.html", "innovation_tools/agile.html", "1"]
       },
       
       "menu1_3": {
