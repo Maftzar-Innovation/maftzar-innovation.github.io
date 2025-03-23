@@ -27,10 +27,11 @@ function createEventRect() {
 async function loadData() {
     let partsToSearch = ['../innovation_tools/accelerator.html', '../innovation_tools/design_thinking.html',
         '../innovation_tools/hackathon.html', '../innovation_tools/jtbd-DESKTOP-UB4M0PG.html', '../innovation_tools/incubator.html',
-        '../innovation_tools/jtbd.html', '../innovation_tools/mvp.html'];
+        '../innovation_tools/jtbd.html', '../innovation_tools/mvp.html','../innovation_tools/POC.html', '../innovation_tools/characterization.html', '../innovation_tools/RICE.html','../innovation_tools/KPIS.html', '../innovation_tools/empathy_persona.html',
+        '../innovation_tools/canvas_model.html', '../innovation_tools/canvas_hackathon.html', '../innovation_tools/scamper.html', '../innovation_tools/research.html', '../innovation_tools/5whys.html', '../innovation_tools/agile.html', ];
 
 
-    //get data from toםl arsenal page
+    //get data from tool arsenal page
     for (let i = 0; i < partsToSearch.length; i++) {
         // Fetch HTML content for a given file
         const response = await fetch(`${partsToSearch[i]}`);
@@ -79,7 +80,6 @@ function searchFunction() {
         if (title.toLowerCase().includes(searchInput.toLowerCase())) {
             csvResults.push({
                 title: title,
-                location: 'תבניות שימושיות',
                 link: columns[3],
             });
         }
