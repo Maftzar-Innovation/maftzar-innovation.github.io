@@ -12,7 +12,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap" rel="stylesheet">
   </head>
+  <style>
+    .search-bar {
+        text-align: right;
+        background: #25232e;
+        border-color: white;
+        border-style: solid;
+        border-radius: 8px;
+        border-width: 1.5px;
+        height: 3.25vh;
+        width: 30vh;
+        transition: 0.5s;
+        color: white;
+        position: fixed;
+        left: 2vw;
+        top: 8.25vh;
+      }
 
+      .search-results {
+        display: flex;
+        flex-direction: column;
+        max-height: 455px;
+        overflow-y: auto;
+        margin-top: 14vh;
+        
+        
+      }
+
+      .search-result {
+        position: relative;
+        margin-top: 1vh;
+        right: 86vw;
+        border-style: solid;
+        border-color: rgba(208, 208, 208);
+        background:  rgba(208, 208, 208);
+        -webkit-text-fill-color: #25232e;
+        border-radius: 3vh;
+        width: 12vw;
+        height: auto;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+      }
+  </style>
   <body>
 <!--header - contains navigation bar and search bar-->
     <div class="header">
@@ -22,7 +64,13 @@
             <a class="nav-bar" href="stories.html" style="text-decoration:none; color: #d0d0d0;">כתבות</a>
             <a class="nav-bar" href="toolArsenalPage.html" style="text-decoration:none; color: #d0d0d0;">ארסנל כלים</a>
         </div>
-      <input class="search-bar" type="text" placeholder="חפש/י">
+        <input
+        class="search-bar"
+        id="search-bar"
+        oninput="searchFunction()"
+        type="text"
+        placeholder="חפש/י" />
+      <div id="search-results" class="search-results"></div>
     </div>
 
     <h2 class="page-header">תבניות שימושיות</h2>
