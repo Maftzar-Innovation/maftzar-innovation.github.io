@@ -45,19 +45,19 @@
         "values": ["innovation_tools/canvas_model.html", "innovation_tools/scamper.html", "1"]
       },
       "menu1_4": {
-        "question": "אפשר לקרוא על שיטות לתחקור מדידה כאן)",
+        "question": "אפשר לקרוא על שיטות לתחקור מדידה כאן",
         "buttons": ["KPI's","RICE","חזרה"],
         "values": ["innovation_tools/KPIS.html","innovation_tools/RICE.html","1"]
       },
       "menu1_5": {
-        "question": "נסו לקרוא על פיץ' (קישור)",
+        "question": "נסו לקרוא על פיץ'",
         "buttons": ["חזרה"],
         "values": ["1"]
       },
       "menu2": {
-        "question": "כדאי לך לעיין בעמוד הכתבות ולראות איך עושים חדשנות בצהל , לקרוא על פרויקטים case studies, מנגנוני חדשנות שקיימים, סיכומים מכנסים וטיפים כללים (+ כפתור מעבר לעמוד כתבות)",
-        "buttons": ["חזרה"],
-        "values": ["0"]
+        "question": "כדאי לך לעיין בעמוד הכתבות ולראות איך עושים חדשנות בצהל , לקרוא על פרויקטים case studies, מנגנוני חדשנות שקיימים, סיכומים מכנסים וטיפים כללים",
+        "buttons": ["לכתבות","חזרה"],
+        "values": ["articles.html","0"]
       },
       "menu3": {
         "question": "מחפש איש קשר ספציפי או תוכנית מסוימת?",
@@ -70,9 +70,9 @@
         "values": ["homePage.html#innovation-contacts","3"] 
       },
       "menu3_2": {
-        "question": "אלה תוכניות ומנגנוני החדשנות הקיימים (קישור לחלק של הזדמנויות חדשנות)", 
-        "buttons": ["חזרה"],
-        "values": ["3"]
+        "question": "אלה תוכניות ומנגנוני החדשנות הקיימים ", 
+        "buttons": ["תוכניות","חזרה"],
+        "values": ["homePage.html#innovation-opportunities","3"]
       },
       "menu4": {
         "question": "כדאי לבחון את עמוד התבניות השימושיות שמרכז טמפלייטים מוכנים לשימוש במגוון פורמטים!",
