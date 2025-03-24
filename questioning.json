@@ -41,11 +41,11 @@
       
       "menu1_3": {
         "question": "יש כמה כלים בנושא, ניתן לחקור אותם בעמוד ארסנל כלים",
-        "buttons": ["מודל הקנבס", "SCAMPER", "חזרה"],
-        "values": ["innovation_tools/canvas_model.html", "innovation_tools/scamper.html", "1"]
+        "buttons": ["מודל הקנבס", "SCAMPER","תעדוף RICE", "חזרה"],
+        "values": ["innovation_tools/canvas_model.html", "innovation_tools/scamper.html","innovation_tools/RICE.html", "1"]
       },
       "menu1_4": {
-        "question": "אפשר לקרוא על שיטות לתחקור מדידה כאן",
+        "question": "אפשר לקרוא על שיטות לתחקור ומדידה כאן",
         "buttons": ["KPI's","RICE","חזרה"],
         "values": ["innovation_tools/KPIS.html","innovation_tools/RICE.html","1"]
       },
@@ -60,9 +60,9 @@
         "values": ["articles.html","0"]
       },
       "menu3": {
-        "question": "מחפש איש קשר ספציפי או תוכנית מסוימת?",
-        "buttons": ["איש קשר", "תוכנית", "חזרה"],
-        "values": ["3_1", "3_2", "0"]
+        "question": "מחפש איש קשר ספציפי?",
+        "buttons": ["איש קשר", "חזרה"],
+        "values": ["3_1", "0"]
       },
       "menu3_1": {
         "question": "אלו הם רמדי החדשנות בצבא ",
