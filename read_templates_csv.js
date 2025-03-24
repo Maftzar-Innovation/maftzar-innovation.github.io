@@ -32,7 +32,7 @@ $(document).ready(function () {
             cardRow2=`<div class="row-container">`;
             cardRow3=`<div class="row-container">`;
 
-            cardRow1+=`<div><h3 class="row-header">מצגות</h3></div>`;
+            cardRow1+=`<div><h3 class="row-header"> מצגות ותבניות</h3></div>`;
             cardRow2+=`<div><h3 class="row-header">לוחות זמנים</h3></div>`;
             cardRow3+=`<div><h3 class="row-header">מסמכים מנהלתיים</h3></div>`;
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
             cardRow3+=`<div class="scroller">`;
 
             //Generate image arry type=> 0=excel 1=pdf 2=ppt 3=word
-            let arr = ['pics/excel.jpg','pics/pdf.jpg','pics/powerpoint.jpg','pics/word.jpg'];
+            let arr = ['pics/word.jpg','pics/word.jpg','pics/word.jpg','pics/word.jpg'];
             console.log();
 
             for (let i = 1; i < rows.length; i++) {

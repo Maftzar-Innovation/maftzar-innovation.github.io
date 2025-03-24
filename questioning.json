@@ -47,7 +47,7 @@
       "menu1_4": {
         "question": "אפשר לקרוא על שיטות לתחקור מדידה כאן)",
         "buttons": ["KPI's","RICE","חזרה"],
-        "values": ["innovation_tools/KPIS.html","innovation_tools/rice.html","1"]
+        "values": ["innovation_tools/KPIS.html","innovation_tools/RICE.html","1"]
       },
       "menu1_5": {
         "question": "נסו לקרוא על פיץ' (קישור)",
@@ -65,12 +65,12 @@
         "values": ["3_1", "3_2", "0"]
       },
       "menu3_1": {
-        "question": "אלה רמדי החדשנות בצבא  (+קישור לחלק של רמדי חדשנות)",
+        "question": "אלו הם רמדי החדשנות בצבא ",
         "buttons": ["רמדי חדשנות","חזרה"],
-        "values": ["homepage.html#innovation-contacts","3"]
+        "values": ["homePage.html#innovation-contacts","3"] 
       },
       "menu3_2": {
-        "question": "אלה תוכניות ומנגנוני החדשנות הקיימים (קישור לחלק של הזדמנויות חדשנות)",
+        "question": "אלה תוכניות ומנגנוני החדשנות הקיימים (קישור לחלק של הזדמנויות חדשנות)", 
         "buttons": ["חזרה"],
         "values": ["3"]
       },
