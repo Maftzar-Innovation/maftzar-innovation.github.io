@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="loadarticle.js" defer></script>
   </head>
-
+  
   <body>
     <!--header - contains navigation bar and search bar-->
     <div class="header">
@@ -46,7 +46,13 @@
           >ארסנל כלים</a
         >
       </div>
-      <input class="search-bar" type="text" placeholder="חפש/י" />
+      <input
+        class="search-bar"
+        id="search-bar"
+        oninput="searchFunction()"
+        type="text"
+        placeholder="חפש/י" />
+      <div id="search-results" class="search-results"></div>
     </div>
 
     <h2 class="page-header">כתבות</h2>

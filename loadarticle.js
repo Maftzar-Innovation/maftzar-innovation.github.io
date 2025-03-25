@@ -124,11 +124,14 @@ function createDivs() {
 
 function openSiteB(myValue) {
     let dataToSend = { msg: myValue };
-    const siteBWindow = window.open("articles.html");
 
-    siteBWindow.addEventListener("load", function () {
-        siteBWindow.postMessage(dataToSend, "http://127.0.0.1:5500/exp.html");
-    });
+    // Store data in sessionStorage so the new page can access it
+    sessionStorage.setItem("dataMsg", JSON.stringify(dataToSend));
+
+    // Navigate to articles.html in the same tab
+    window.location.href 
+    = "articles.html";
 }
+
 
 

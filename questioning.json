@@ -57,12 +57,12 @@
       "menu2": {
         "question": "כדאי לך לעיין בעמוד הכתבות ולראות איך עושים חדשנות בצהל , לקרוא על פרויקטים case studies, מנגנוני חדשנות שקיימים, סיכומים מכנסים וטיפים כללים",
         "buttons": ["לכתבות","חזרה"],
-        "values": ["articles.html","0"]
+        "values": ["stories.html","0"]
       },
       "menu3": {
         "question": "מחפש איש קשר ספציפי?",
         "buttons": ["איש קשר", "חזרה"],
-        "values": ["3_1", "0"]
+        "values": ["homePage.html#innovation-contacts", "0"]
       },
       "menu3_1": {
         "question": "אלו הם רמדי החדשנות בצבא ",

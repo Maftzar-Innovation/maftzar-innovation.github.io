@@ -11,7 +11,7 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-    <title>כתבות</title>
+    <title>The Innovation Website</title>
   </head>
   <body>
     <div class="header">
@@ -46,6 +46,16 @@
     <div class="text"></div>
     <script>
       addData(sessionStorage.temp);
+      window.addEventListener('load', function () {
+      let storedData = sessionStorage.getItem("dataMsg");
+      if (storedData) {
+          let parsedData = JSON.parse(storedData);
+          addData(parsedData.msg);
+      } else {
+          document.title = "כתבות"; // Keep default title
+      }
+  });
     </script>
+    
   </body>
 </html>
